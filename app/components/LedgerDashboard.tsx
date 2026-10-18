@@ -89,8 +89,6 @@ export default function LedgerDashboard() {
     return (
         <main className="min-h-screen bg-gray-50 p-8 text-gray-900">
             <div className="max-w-3xl mx-auto">
-                <h1 className="text-3xl font-bold mb-8">Summit</h1>      
-
                 {/* Transaction Form */}
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                     <h2 className="text-xl font-semibold mb-6">Post New Transactions</h2>
