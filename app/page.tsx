@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center">
@@ -12,11 +14,9 @@ export default function Home() {
      <div className="flex gap-4">
       <button className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium
       transition-colors">
-        Open Journal
-      </button>
-      <button className="px-8 py-3 rounded-full border border-slate-300 dark:border-slate-700
-      hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-colors">
-        About Summit
+        <Link href="/dashboard">
+          Dashboard
+        </Link>
       </button>
      </div>
     </div>
