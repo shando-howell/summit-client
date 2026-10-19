@@ -1,4 +1,4 @@
-import { unstable_noStore as noStore } from 'next/cache';
+export const instant = false;
 
 interface TransactionLine {
     id: number;
@@ -18,8 +18,6 @@ interface Transaction {
 const formatCurrency = (cents: number) => `$${(cents / 100).toFixed(2)}`;
 
 export default async function TransactionsPage() {
-    noStore();
-
     const txRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/transactions`, {
         cache: 'no-store',
     });

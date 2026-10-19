@@ -1,5 +1,6 @@
-import { unstable_noStore as noStore } from 'next/cache';
 import JournalCalculator from "../components/JournalCalculator";
+
+export const instant = false;
 
 interface Account {
   id: string;
@@ -8,8 +9,6 @@ interface Account {
 }
 
 export default async function JournalPage() {
-  noStore();
-
   // Fetch accounts on the server
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/accounts`, {
     cache: 'no-store',

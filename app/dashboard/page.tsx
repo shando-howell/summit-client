@@ -1,5 +1,6 @@
 import { currentUser } from '@clerk/nextjs/server';
-import { unstable_noStore as noStore } from 'next/cache';
+
+export const instant = false;
 
 interface Account {
     id: string;
@@ -8,8 +9,6 @@ interface Account {
 }
 
 export default async function DashboardPage(){
-    noStore();
-
     // Get the lobgged-in user from Clerk
     const user = await currentUser();
 
