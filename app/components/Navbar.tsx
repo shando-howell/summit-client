@@ -28,9 +28,13 @@ export default function Navbar() {
                         </Link>
                         <Link href="/journal" className="text-sm font-medium text-slate-600 hover:text-slate-900
                         dark:text-slate-300 dark:hover:text-white transition-colors">
-                            Journal Entries
+                            Journal Entry
                         </Link>
-
+                        <Link href="/transactions" className="text-sm font-medium text-slate-600 hover:text-slate-900
+                        dark:text-slate-300 dark:hover:text-white transition-colors">
+                            Transactions
+                        </Link>
+                        
                         <div className="flex items-center space-x-4">
                             <Show when="signed-out">
                                 <SignInButton mode="modal">
